@@ -1,0 +1,277 @@
+/* ---------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------- */
+
+/*
+font-sizes: default - 1em, h3: 1.2em, h2: 1.4em, h1: 1.6em, line-height: 1.6 (always use line-height in the body and with a 'multiplier value' like mentioned above, and not percent/ems), margin: 0 auto, A good practice is to have the line-height as 1.5 times that of the font-size.<br>
+Put css attributes in alphabetical order or any other order and stick to it.
+Generally, it's a good idea to make the labels and inputs display as block level elements and then display:inline those that are meant to be used in a single line. Attribute selectors can help in this, much like input[type=checkbox] {display:inline}
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Always style links in this hierarchy: LVHAF = Love Hate and Fuck */
+
+a:link {}
+
+a:visited{}
+
+a:hover {}
+
+a:active{}
+
+a:focus{}
+
+:root {
+  --Mustard: #ffc600;
+  --Navy: #001f3f;
+  --Blue: #0074D9;
+  --Aqua: #7FDBFF;
+  --Teal: #39CCCC;
+  --Olive: #3D9970;
+  --Green: #2ECC40;
+  --Lime-Green: #01FF70;
+  --Yellow: #FFDC00;
+  --Orange: #FF851B;
+  --Red: #FF4136;
+  --Maroon: #85144B;
+  --Fuchsia: #F012BE;
+  --Purple: #B10DC9;
+  --Black: #111111;
+  --Grey: #AAAAAA;
+  --Concrete: #95a5a6;
+  --Asbestos: #7f8c8d;
+  --Silver: #DDDDDD;
+  --CloudWhite: #ecf0f1;
+  --SunFlower: #f1c40f;
+  --Alizarin: #e74c3c;
+  --Pomegranate: #c0392b;
+  --PeterRiver: #3498db;
+  --BelizeHole: #2980b9;
+  --MidnightBlue: #2c3e50;
+  --WetAsphalt: #34495e;
+  --Amethyst: #9b59b6;
+  --Wisteria: #8e44ad;
+}
+
+/* ---------------------------------------------------------------
+Main CSS Properties
+--------------------------------------------------------------- */
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/* The container */
+.container {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  display: grid;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: var(--Wisteria); */
+}
+
+/* Combined CSS for all the sections */
+
+.productPitchSection {
+  padding: 20px 10px 20px 10px;
+}
+
+/* Different sections */
+
+.introduction {
+  align-items: center;
+  border: 3px solid var(--Green);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+}
+
+#introductoryVideo {
+  position: absolute;
+  z-index: -100;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /* top: 0%; */
+  /* min-width: 100%;
+  top: 0%;
+  left: 0%;
+  min-height: 100%;
+  background: url(src/images/random-football.jpg) no-repeat; */
+}
+
+.videoText {
+  margin: 20px 10px 20px 10px;
+  color: white;
+}
+
+.methodology {
+  align-items: center;
+  background: url(../src/images/introduction-sample-image.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 3px solid pink;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+}
+
+.backImage {
+}
+
+.products {
+  background-color: var(--Grey);
+  color: var(--MidnightBlue);
+}
+
+.nutritionCenter {
+  background-color: var(--Asbestos);
+}
+
+.tournaments {
+  /* background-color: var(--MidnightBlue); */
+}
+
+.team {
+  align-items: center;
+  background-image: url(../src/images/team-sample-image.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 3px solid pink;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  color: white;
+}
+
+.gallery {
+  /* background-color: var(--Maroon); */
+}
+
+.trainingSchedule {
+  background-color: var(--Orange);
+}
+
+/* The punchline */
+.punchline {
+  font-size: 5em;
+  line-height: 1.2;
+  border: 3px solid var(--Mustard);
+}
+
+/* The explanation for the punchline */
+.explanation {
+  border: 3px solid var(--Alizarin);
+}
+
+/* The Button */
+.callToAction {
+  width: 200px;
+  font-size: 1.2em;
+  padding: 10px;
+  border: none;
+  background: var(--SunFlower);
+  color: #000;
+  cursor: pointer;
+}
+
+.callToAction:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* ---------------------------------------------------------------
+Media Queries
+---------------------------------------------------------------*/
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .methodology, .team {
+    padding: 200px;
+  }
+
+  .videoText {
+    margin: 200px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
