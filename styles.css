@@ -132,7 +132,8 @@ h3 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* background-color: var(--Wisteria); */
+    border: 3px solid var(--BelizeHole);
+    background-color: var(--Wisteria);
 }
 
 /* Combined CSS for all the sections */
@@ -156,7 +157,8 @@ h3 {
   position: absolute;
   z-index: -100;
   height: auto;
-  width: auto;
+  /* This width property needs to be altered */
+  width: 100%;
   left: 50%;
   transform: translate(-50%, 0%);
   /* top: 0%; */
@@ -219,8 +221,56 @@ h3 {
   /* background-color: var(--Maroon); */
 }
 
+/* The Training Schedule and the Pricing Charts */
 .trainingSchedule {
-  background-color: var(--Orange);
+  background: url(../src/images/random-football.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.trainingSchedule .punchline {
+  font-size: 3em;
+}
+
+.allPricingBlocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pricingBlock {
+  /* margin-bottom: 10px; */
+  min-width: 230px;
+  max-width: 400px;
+  padding: 30px 10px 30px 10px;
+}
+
+.pricingTitle {
+  background-color: var(--CloudWhite);
+  opacity: 0.75;
+  margin: 5px;
+}
+
+.pricingExplained {
+  color: #eee;
+  /* color: black; */
+}
+
+.delimiter {
+  font-weight: 800;
+}
+
+.under8s {
+  background-color: rgba(0,92,90,0.75);
+}
+
+.under13s {
+  background-color: rgba(25, 156, 123, 0.75);
+}
+
+.under16s {
+  background-color: rgba(243, 113, 0, 0.75);
 }
 
 /* The punchline */
@@ -260,6 +310,10 @@ Media Queries
 @media (min-width: 768px) {
   .methodology, .team {
     padding: 200px;
+  }
+
+  .trainingSchedule {
+    padding: 200px 0;
   }
 
   .videoText {
