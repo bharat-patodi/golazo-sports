@@ -12,13 +12,13 @@
     <div class = 'container'>
         <div class = 'navBar'>
             <div id="home"><a href = "/index.html">Logo</a></div>
-            <div id = "menuIcon"
-            onclick="menuClick()">
+            <div id = "menuIcon" onclick = "menuClick()">
                 <div class = "menuIconBars bar1"></div>
                 <div class = "menuIconBars bar2"></div>
                 <div class = "menuIconBars bar3"></div>
             </div>
-            <!-- <div class="overlay">
+        </div>
+            <div id="overlay">
                 <div class="home"><a href="/index.html">Home</a></div>
                 <div><a href="/client/pages/products.html">Products</a></div>
                 <div><a href="/client/pages/nutrition-centre.html">Nutrition Centre</a></div>
@@ -27,8 +27,7 @@
                 <div><a href="/client/pages/gallery.html">Gallery</a></div>
                 <div><a href="/client/pages/about-us.html">About Us</a></div>
                 <div><a href="/client/pages/contact-us.html">Contact Us</a></div>
-            </div> -->
-        </div>
+            </div>
         <div id="pageBelowNavbar">
         <div id = 'introduction'>
             <video id = "introductoryVideo" src = "src/videos/Sample-GamePlay.mp4" autoplay loop>Remember to include the different formats of the video</video>
@@ -107,7 +106,11 @@
     <script>
         // Added class by mistake, should be tag
         menuClick = () => {
-            document.getElementsByClassName('container').classList.toggle('change');
+            console.log("Wooooooooooooooooooooo");
+            document.getElementById('pageBelowNavbar').classList.toggle('hide');
+            document.getElementById('menuIcon').classList.toggle('change');
+            document.getElementById('overlay').classList.toggle('show');
+            console.log(document.getElementById('overlay'));
         }
     </script>
 </body>

@@ -133,7 +133,6 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: black;
-    /* height: 50px; */
     position: sticky;
     top: 0;
     padding: 10px 30px;
@@ -142,6 +141,17 @@ h3 {
   .navBar a {
     text-decoration: none;
     color: var(--Mustard);
+}
+
+#overlay {
+  background-color: #000;
+  display: none;
+  /* visibility: hidden; */
+}
+
+#overlay a {
+  text-decoration: none;
+  color: var(--Mustard);
 }
 
 /* Navbar action button */
@@ -158,6 +168,16 @@ h3 {
 
 /* Navbar menu button clicked */
 
+.hide {
+  /* display:none; */
+  visibility: visible;
+}
+
+.show {
+  /* display: block; */
+  /* visibility: visible; */
+}
+
 .change .bar1 {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
@@ -169,6 +189,7 @@ h3 {
 .change .bar3 {
   transform: rotate(45deg) translate(0px, 3px);
 }
+
 
 /* Combined CSS for all the pitch sections */
 
@@ -329,6 +350,14 @@ h3 {
   text-decoration: none;
   color: var(--Mustard);
 }
+
+
+
+/* Test CSS */
+#pageBelowNavbar {
+  /* visibility: hidden; */
+}
+
 /* ---------------------------------------------------------------
 Media Queries
 ---------------------------------------------------------------*/
