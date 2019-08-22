@@ -100,11 +100,18 @@ a:focus{}
 Main CSS Properties
 --------------------------------------------------------------- */
 
+/* The main container */
+.container {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  display: grid;
+}
+
 /* Headings */
 h1, h2, h3 {
   font-family: 'Merriweather', sans-serif;
   font-weight: 800;
-  font-style: italic;
 }
 
 h1 {
@@ -119,38 +126,94 @@ h3 {
   font-size: 1.2em;
 }
 
-/* The container */
-.container {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  display: grid;
-}
-
+/* Specific sections */
 .navBar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    border: 3px solid var(--BelizeHole);
-    background-color: var(--Wisteria);
+    justify-content: space-between;
+    background-color: black;
+    /* height: 50px; */
+    position: sticky;
+    top: 0;
+    padding: 10px 30px;
+  }
+
+  .navBar a {
+    text-decoration: none;
+    color: var(--Mustard);
 }
 
-/* Combined CSS for all the sections */
+/* Navbar action button */
+#menuIcon {
+}
+
+.navBar .menuIconBars {
+  width: 25px;
+  height: 3px;
+  background-color: var(--Mustard);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Navbar menu button clicked */
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  display: none;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(0px, 3px);
+}
+
+/* Combined CSS for all the pitch sections */
 
 .productPitchSection {
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
   padding: 20px 10px 20px 10px;
+  text-align: center;
+}
+
+/* The punchline */
+.punchline {
+  font-size: 4.5em;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+/* The explanation for the punchline */
+.explanation {
+}
+
+/* The Button */
+.callToAction {
+  padding: 10px;
+  background: var(--Mustard);
+  font-size: 1.2em;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  margin-top: 50px;
+}
+
+.callToAction:hover {
+  background: #ddd;
+  color: black;
 }
 
 /* Different sections */
 
-.introduction {
-  align-items: center;
-  border: 3px solid var(--Green);
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  text-align: center;
+#introduction {
 }
 
 #introductoryVideo {
@@ -170,137 +233,102 @@ h3 {
 }
 
 .videoText {
-  margin: 20px 10px 20px 10px;
   color: white;
 }
 
-.methodology {
-  align-items: center;
+#methodology {
   background: url(../src/images/introduction-sample-image.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 3px solid pink;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  text-align: center;
+  align-content: space-around;
 }
 
-.backImage {
-}
-
-.products {
-  background-color: var(--Grey);
-  color: var(--MidnightBlue);
-}
-
-.nutritionCenter {
-  background-color: var(--Asbestos);
-}
-
-.tournaments {
-  /* background-color: var(--MidnightBlue); */
-}
-
-.team {
-  align-items: center;
+#team {
   background-image: url(../src/images/team-sample-image.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 3px solid pink;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  text-align: center;
   color: white;
 }
 
-.gallery {
-  /* background-color: var(--Maroon); */
-}
-
 /* The Training Schedule and the Pricing Charts */
-.trainingSchedule {
+#trainingSchedule {
   background: url(../src/images/random-football.jpg);
   background-size: cover;
-  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.trainingSchedule .punchline {
+#trainingSchedule .punchline {
   font-size: 3em;
 }
 
-.allPricingBlocks {
+#trainingScehdule > * {
+  flex-grow: 1;
+}
+
+#trainingSchedule .allPricingBlocks {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.pricingBlock {
-  /* margin-bottom: 10px; */
-  min-width: 230px;
-  max-width: 400px;
+#trainingSchedule .pricingBlock {
+  min-width: 300px;
+  max-width: 600px;
   padding: 30px 10px 30px 10px;
+  color: white;
+  flex-grow: 1;
 }
 
-.pricingTitle {
+#trainingSchedule .pricingIcon {
   background-color: var(--CloudWhite);
-  opacity: 0.75;
+  opacity: 0.5;
   margin: 5px;
+  display: inline-block;
+  padding: 20px;
+  font-size: 2em;
+  border-radius: 50%;
 }
 
-.pricingExplained {
-  color: #eee;
-  /* color: black; */
-}
-
-.delimiter {
+#trainingSchedule .delimiter {
   font-weight: 800;
+  background-color: var(--CloudWhite);
+  opacity: 0.5;
+  color: black;
+  display: inline-block;
+  padding: 2px;
 }
 
-.under8s {
-  background-color: rgba(0,92,90,0.75);
+#trainingSchedule .under8s {
+  background-color: rgba(237, 77, 19, 0.75);
 }
 
-.under13s {
-  background-color: rgba(25, 156, 123, 0.75);
+#trainingSchedule .under13s {
+  background-color: rgba(0, 92, 90, 0.75);
 }
 
-.under16s {
+#trainingSchedule .under16s {
   background-color: rgba(243, 113, 0, 0.75);
 }
 
-/* The punchline */
-.punchline {
-  font-size: 5em;
-  line-height: 1.2;
-  border: 3px solid var(--Mustard);
+#news {
+  background-color: var(--Maroon);
 }
 
-/* The explanation for the punchline */
-.explanation {
-  border: 3px solid var(--Alizarin);
+#footer {
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--Black);
+  color: var(--CloudWhite);
 }
 
-/* The Button */
-.callToAction {
-  width: 200px;
-  font-size: 1.2em;
-  padding: 10px;
-  border: none;
-  background: var(--SunFlower);
-  color: #000;
-  cursor: pointer;
+#footer a {
+  text-decoration: none;
+  color: var(--Mustard);
 }
-
-.callToAction:hover {
-  background: #ddd;
-  color: black;
-}
-
 /* ---------------------------------------------------------------
 Media Queries
 ---------------------------------------------------------------*/
@@ -308,12 +336,16 @@ Media Queries
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .methodology, .team {
+  #methodology, #team {
     padding: 200px;
   }
 
-  .trainingSchedule {
-    padding: 200px 0;
+  #trainingSchedule {
+    /* padding: 200px 0; */
+  }
+
+  #trainingSchedule .punchline {
+    font-size: 4.5em;
   }
 
   .videoText {

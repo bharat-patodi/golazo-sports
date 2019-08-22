@@ -9,81 +9,115 @@
     <title>Golazo Sports</title>
 </head>
 <body>
-    <div class = "container">
+    <div class = 'container'>
         <div class = 'navBar'>
-            <div class="home"><a href = "/index.html">Home</a></div>
-            <div><a href="/client/pages/products.html">Products</a></div>
-            <div><a href="/client/pages/nutrition-centre.html">Nutrition Centre</a></div>
-            <div><a href="/client/pages/training-schedule.html">Schedule</a></div>
-            <div><a href="/client/pages/tournaments.html">Tournaments</a></div>
-            <div><a href="/client/pages/gallery.html">Gallery</a></div>
-            <div><a href="/client/pages/about-us.html">About Us</a></div>
-            <div><a href="/client/pages/contact-us.html">Contact Us</a></div>
+            <div id="home"><a href = "/index.html">Logo</a></div>
+            <div id = "menuIcon"
+            onclick="menuClick()">
+                <div class = "menuIconBars bar1"></div>
+                <div class = "menuIconBars bar2"></div>
+                <div class = "menuIconBars bar3"></div>
+            </div>
+            <!-- <div class="overlay">
+                <div class="home"><a href="/index.html">Home</a></div>
+                <div><a href="/client/pages/products.html">Products</a></div>
+                <div><a href="/client/pages/nutrition-centre.html">Nutrition Centre</a></div>
+                <div><a href="/client/pages/training-schedule.html">Schedule</a></div>
+                <div><a href="/client/pages/tournaments.html">Tournaments</a></div>
+                <div><a href="/client/pages/gallery.html">Gallery</a></div>
+                <div><a href="/client/pages/about-us.html">About Us</a></div>
+                <div><a href="/client/pages/contact-us.html">Contact Us</a></div>
+            </div> -->
         </div>
-
-        <div class = 'introduction'>
+        <div id="pageBelowNavbar">
+        <div id = 'introduction'>
             <video id = "introductoryVideo" src = "src/videos/Sample-GamePlay.mp4" autoplay loop>Remember to include the different formats of the video</video>
-            <div class="videoText">
+            <div class="videoText productPitchSection" >
                 <h2 class = 'punchline'>golazo</h2>
                 <p class = "explanation">Soccer is love</p>
                 <button class = "callToAction">Get My Free Session</button>
             </div>
         </div>
 
-        <div class = 'methodology productPitchSection'>
+        <div class = 'productPitchSection' id = 'methodology'>
             <h2 class = 'punchline'>best soccer camps</h2>
             <p class = "explanation">We have the best soccer camps.</p>
             <button class = "callToAction">Why are we the best</button>
         </div>
 
-        <div class="team productPitchSection">
+        <div class = 'productPitchSection' id = 'team'>
             <h2 class = "punchline">super team</h2>
             <p class = "explanation">Our coaching staff is excellent.</p>
             <button class = "callToAction" name="Know More">Know More</button>
         </div>
 
-        <div class = "trainingSchedule">
+        <div class = 'productPitchSection' id = 'trainingSchedule'>
             <h2 class = "punchline">
-                FIFA approved training drills.
+                FIFA approved training drills
             </h2>
 
-            <div class="allPricingBlocks">
+            <div class = 'allPricingBlocks'>
                 <div class="under8s pricingBlock">
-                    <p class = pricingTitle>🦄 Under 8s xxxxxxx</p>
+                    <p class = pricingIcon>⚽</p>
                     <p class = "pricingExplained">
-                        <span class = "delimiter">Age group:</span> 4-8 years old<br>
-                        <span class = "delimiter">Available Locations:</span> Decathlon Indore,
-                        Jogabonito, Futsal One<br>
-                        <span class = "delimiter">Training Aspects:</span> Physical Literacy, Affinity to the ball, Excitement to play with friends, Technical Introduction</p>
+                        <h3>Under 8s</h3><br>
+                        <p class = "delimiter">Age Group</p>
+                        <p>4-8 years old</p><br>
+                        <p class = "delimiter">Available Locations</p> <p>Decathlon, Indore<br> Jogabonito, Indore<br> Futsal One, Indore</p><br>
+                        <p class = "delimiter">Training Aspects</p> <p>Physical Literacy<br> Affinity to the ball<br> Excitement to play with friends<br> Technical Introduction</p>
+                    </p>
                 </div>
                 <div class="under13s pricingBlock">
-                    <p class = pricingTitle>🦄 Under 13s</p>
-                    <p>Requirement: 9-13 years old</p>
-                    <p>Available Locations: Decathlon Indore, Jogabonito, Futsal One</p>
-                    <p>Training Aspects: Technical Performance, Tactical Understanding, Excitement to play in Competitions, Physical Training, Team Building
+                    <p class = "pricingExplained">
+                        <p class = pricingIcon>⚽</p>
+                        <h3>Under 13s</h3><br>
+                        <p class = "delimiter">Age Group</p>
+                        <p>9-13 years old</p><br>
+                        <p class = "delimiter">Available Locations</p> <p>Decathlon, Indore<br> Jogabonito, Indore<br> Futsal One, Indore</p><br>
+                        <p class = "delimiter">Training Aspects</p> <p>Technical Performance<br> Tactical Understanding<br> Excitement to play in Competitions<br> Physical Training<br> Team Building</p>
                     </p>
                 </div>
                 <div class="under16s pricingBlock">
-                    <p class = pricingTitle>🦄 Under 16s</p>
-                    <p><strong>Requirement:</strong> 13-18 years old</p>
-                    <p>Available Locations: Decathlon Indore, Jogabonito, Futsal One</p>
-                    <p>Training Aspects: Technical Performance, Tactical Performance, Physical Training, Team Building, Professional Conduct, Leadership Training, Collective Play
+                    <p class = "pricingExplained">
+                        <p class=pricingIcon>⚽</p>
+                        <h3>Under 16/18s</h3><br>
+                        <p class="delimiter">Age Group</p>
+                        <p>13-18 years</p><br>
+                        <p class="delimiter">Available Locations</p>
+                        <p>Decathlon, Indore<br> Jogabonito, Indore<br> Futsal One, Indore</p><br>
+                        <p class="delimiter">Training Aspects</p>
+                        <p>Technical Performance<br> Tactical Performance<br> Physical Training<br>Team Building<br>Professional Conduct<br> Leadership Training<br> Collective Play</p>
                     </p>
                 </div>
             </div>
             <button class = "callToAction">Get My Free Session</button>
         </div>
 
-        <div class = 'news productPitchSection'>News Coverage</div>
+        <div class = 'productPitchSection' id = 'news'>News Coverage</div>
 
-        <div class = 'footer productPitchSection'>
+        <div class = 'productPitchSection' id = 'footer'>
             <div class = 'socialMedia'>Social Media</div>
             <a href= "www.google.com">Terms</a>
             <a href= "www.google.com">Privacy</a>
-            <a href= "www.google.com">About</a>
-            <a href= "www.google.com">Contact</a>
+            <p>© 2019 Golazo Sports</p>
         </div>
 
+        </div>
     </div>
+    <script>
+        // Added class by mistake, should be tag
+        menuClick = () => {
+            document.getElementsByClassName('container').classList.toggle('change');
+        }
+    </script>
 </body>
 </html>
+
+<!--
+    (a) Add different video types
+    (b) Add landscape/portrait video
+    (c) Get proper images
+    (d) Add a functional nav-overlay
+    (e) Add a wp blog
+    (f) Footer
+ -->
