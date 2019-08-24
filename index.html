@@ -18,17 +18,15 @@
                 <div class = "menuIconBars bar3"></div>
             </div>
         </div>
-            <div id="overlay">
-                <div class="home"><a href="/index.html">Home</a></div>
-                <div><a href="/client/pages/products.html">Products</a></div>
-                <div><a href="/client/pages/nutrition-centre.html">Nutrition Centre</a></div>
-                <div><a href="/client/pages/training-schedule.html">Schedule</a></div>
-                <div><a href="/client/pages/tournaments.html">Tournaments</a></div>
-                <div><a href="/client/pages/gallery.html">Gallery</a></div>
-                <div><a href="/client/pages/about-us.html">About Us</a></div>
-                <div><a href="/client/pages/contact-us.html">Contact Us</a></div>
+            <div id="overlay" class = "hide">
+                <div class = "heavy"><a href="./client/pages/curriculum-design.html">Curriculum</a></div>
+                <div class = "heavy"><a href="/client/pages/training-schedule.html">Schedule</a></div>
+                <div class = "heavy"><a href="/client/pages/tournaments.html">Tournaments</a></div>
+                <div class = "heavy"><a href="/client/pages/gallery.html">Gallery</a></div>
+                <div class = "light"><a href="/client/pages/about-us.html">About Us</a></div>
+                <div class = "light"><a href="/client/pages/contact-us.html">Contact Us</a></div>
             </div>
-        <div id="pageBelowNavbar">
+        <div id="pageBelowNavbar" class = "show">
         <div id = 'introduction'>
             <video id = "introductoryVideo" src = "src/videos/Sample-GamePlay.mp4" autoplay loop>Remember to include the different formats of the video</video>
             <div class="videoText productPitchSection" >
@@ -107,10 +105,23 @@
         // Added class by mistake, should be tag
         menuClick = () => {
             console.log("Wooooooooooooooooooooo");
-            document.getElementById('pageBelowNavbar').classList.toggle('hide');
-            document.getElementById('menuIcon').classList.toggle('change');
-            document.getElementById('overlay').classList.toggle('show');
+            const pgBelowNav = document.getElementById('pageBelowNavbar');
+            const overlay = document.getElementById('overlay');
+            const menuIcon = document.getElementById('menuIcon');
+            toggleClass(overlay, "show", "hide");
+            toggleClass(pgBelowNav, "hide", "show");
+            toggleClass(menuIcon, "change", "");
             console.log(document.getElementById('overlay'));
+            console.log(document.getElementById('pageBelowNavbar'));
+            console.log(document.getElementById('menuIcon'));
+        }
+
+        toggleClass = (theId, class1, class2) => {
+            if (theId.className === class1) {
+                theId.className = class2;
+            } else {
+                theId.className = class1;
+            }
         }
     </script>
 </body>

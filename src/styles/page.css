@@ -99,19 +99,23 @@ a:focus{}
 /* ---------------------------------------------------------------
 Main CSS Properties
 --------------------------------------------------------------- */
-
 /* The main container */
 .container {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   display: grid;
+  background-color: var(--MidnightBlue);
+  color: white;
 }
 
 /* Headings */
 h1, h2, h3 {
   font-family: 'Merriweather', sans-serif;
   font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 h1 {
@@ -125,6 +129,14 @@ h2 {
 h3 {
   font-size: 1.2em;
 }
+
+/* The punchline */
+.punchline {
+  font-size: 4.5em;
+  line-height: 1.2;
+  font-style: italic;
+}
+
 
 /* Specific sections */
 .navBar {
@@ -145,30 +157,13 @@ h3 {
 
 #overlay {
   background-color: #000;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 300px;
-  font-size: 1.4em;
-  /* display: none; */
-  /* display: flex; */
+  display: none;
   /* visibility: hidden; */
 }
 
 #overlay a {
-  display: block;
   text-decoration: none;
   color: var(--Mustard);
-  margin-bottom: 20px;
-  padding: 3px;
-}
-
-.heavy {
-  font-weight: 800;
-}
-
-.light {
-  font-size: 0.6em;
 }
 
 /* Navbar action button */
@@ -186,12 +181,12 @@ h3 {
 /* Navbar menu button clicked */
 
 .hide {
-  display:none;
-  /* visibility: visible; */
+  /* display:none; */
+  visibility: visible;
 }
 
 .show {
-  display: flex;
+  /* display: block; */
   /* visibility: visible; */
 }
 
@@ -207,172 +202,22 @@ h3 {
   transform: rotate(45deg) translate(0px, 3px);
 }
 
-
-/* Combined CSS for all the pitch sections */
-
-.productPitchSection {
-  align-content: space-around;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  /* justify-content: space-around; */
-  padding: 20px 10px 20px 10px;
-  text-align: center;
-}
-
-/* The punchline */
-.punchline {
-  font-size: 4.5em;
-  line-height: 1.2;
-  font-style: italic;
-}
-
-/* The explanation for the punchline */
-.explanation {
-}
-
-/* The Button */
-.callToAction {
-  padding: 10px;
-  background: var(--Mustard);
-  font-size: 1.2em;
-  color: #000;
-  cursor: pointer;
-  border: none;
-  width: 200px;
-  margin-top: 50px;
-}
-
-.callToAction:hover {
-  background: #ddd;
-  color: black;
-}
-
-/* Different sections */
-
-#introduction {
-}
-
-#introductoryVideo {
-  position: absolute;
-  z-index: -100;
-  height: auto;
-  /* This width property needs to be altered */
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  /* top: 0%; */
-  /* min-width: 100%;
-  top: 0%;
-  left: 0%;
-  min-height: 100%;
-  background: url(src/images/random-football.jpg) no-repeat; */
-}
-
-.videoText {
-  color: white;
-}
-
-#methodology {
-  background: url(../src/images/introduction-sample-image.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-content: space-around;
-}
-
-#team {
-  background-image: url(../src/images/team-sample-image.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-}
-
-/* The Training Schedule and the Pricing Charts */
-#trainingSchedule {
-  background: url(../src/images/random-football.jpg);
-  background-size: cover;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-#trainingSchedule .punchline {
-  font-size: 3em;
-}
-
-#trainingScehdule > * {
-  flex-grow: 1;
-}
-
-#trainingSchedule .allPricingBlocks {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-#trainingSchedule .pricingBlock {
-  min-width: 300px;
-  max-width: 600px;
-  padding: 30px 10px 30px 10px;
-  color: white;
-  flex-grow: 1;
-}
-
-#trainingSchedule .pricingIcon {
-  background-color: var(--CloudWhite);
-  opacity: 0.5;
-  margin: 5px;
-  display: inline-block;
-  padding: 20px;
-  font-size: 2em;
-  border-radius: 50%;
-}
-
-#trainingSchedule .delimiter {
-  font-weight: 800;
-  background-color: var(--CloudWhite);
-  opacity: 0.5;
-  color: black;
-  display: inline-block;
-  padding: 2px;
-}
-
-#trainingSchedule .under8s {
-  background-color: rgba(237, 77, 19, 0.75);
-}
-
-#trainingSchedule .under13s {
-  background-color: rgba(0, 92, 90, 0.75);
-}
-
-#trainingSchedule .under16s {
-  background-color: rgba(243, 113, 0, 0.75);
-}
-
-#news {
-  background-color: var(--Maroon);
+.pageBelowNavbar {
+    padding: 10% 20%;
 }
 
 #footer {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--Black);
   color: var(--CloudWhite);
+  padding: 10px 30px;
 }
 
 #footer a {
   text-decoration: none;
   color: var(--Mustard);
-}
-
-
-
-/* Test CSS */
-#pageBelowNavbar.show{
-  display:inherit;
 }
 
 /* ---------------------------------------------------------------
@@ -382,21 +227,7 @@ Media Queries
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #methodology, #team {
-    padding: 200px;
-  }
 
-  #trainingSchedule {
-    /* padding: 200px 0; */
-  }
-
-  #trainingSchedule .punchline {
-    font-size: 4.5em;
-  }
-
-  .videoText {
-    margin: 200px;
-  }
 }
 
 /* Medium devices (desktops, 992px and up) */
