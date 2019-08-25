@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../src/styles/page.css">
+    <title>Team</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class='navBar'>
+            <div id="home"><a href="../../index.html">Golazo</a></div>
+            <div id="menuIcon" onclick="menuClick()">
+                <div class="menuIconBars bar1"></div>
+                <div class="menuIconBars bar2"></div>
+                <div class="menuIconBars bar3"></div>
+            </div>
+        </div>
+
+        <div id="overlay" class="hide">
+            <div class="heavy"><a href="./client/pages/curriculum-design.html">Curriculum</a></div>
+            <div class="heavy"><a href="/client/pages/training-schedule.html">Schedule</a></div>
+            <div class="heavy"><a href="/client/pages/tournaments.html">Tournaments</a></div>
+            <div class="heavy"><a href="/client/pages/gallery.html">Gallery</a></div>
+            <div class="light"><a href="/client/pages/about-us.html">About Us</a></div>
+            <div class="light"><a href="/client/pages/contact-us.html">Contact Us</a></div>
+        </div>
+
+        <div id="pageBelowNavbar">
+            <h2 class="punchline">Team</h2>
+            <div class="teamMember">
+                <img alt = "team member profile picture" src = "../../src/images/divyank-sood.gif" class = "teamMemberImage">
+                <div class="teamMemberText">
+                    <h3>Divyank Sood</h3>
+                    <p>Co-founder at Golazo Sports, Divyank has a wide network within the football industry both, India and abroad. Having done his MBA and further studies in the US, he hold a good amount of experience with the top firms in New York. A footballer at heart, he is an Arsenal fan.</p>
+                </div>
+            </div>
+            <div class="teamMember">
+                <img alt = "team member profile picture" src = "../../src/images/aditya-choudhary.gif" class = "teamMemberImage">
+                <div class="teamMemberText">
+                    <h3>Aditya Choudhary</h3>
+                    <p>Founding member at Golazo Sports, Aditya, after graduating as an I.T. engineer, went on to develop his entrepreneurial skills in his various successful ventures. He developed a wide-array of connections with football academies and clubs during his time in UK. He is an avid Liverpool supporter.</p>
+                </div>
+            </div>
+            <div class="teamMember">
+                <img alt = "team member profile picture" src = "../../src/images/steven-fernandes.gif" class = "teamMemberImage">
+                <div class="teamMemberText">
+                    <h3>Steven Fernandes</h3>
+                    <p>Having played CBSE football nationals, University football in Delhi, and then eventually First Division football with
+                        New Delhi Heroes F.C., Steven is a true-blue football enthusiast and entrepreneur. He adds technical expertise to the team with his unbound experience in the Indian football industry. He is a Manchester United supporter.</p>
+                    </div>
+            </div>
+            <div class="teamMember">
+                <img alt = "team member profile picture" src = "../../src/images/enrico-manganaro.gif" class = "teamMemberImage">
+                <div class="teamMemberText">
+                    <h3>Enrico Manganaro</h3>
+                    <p>
+                        UEFA-B Licensed coach, and Head Coach at Golazo Football Academy (GFA), Enrico, is committed to share knowledge and hands-on training to improve grassroots football in India. A renowned coach and tactical expert, Enrico has a vast amount of experience in mentoring kids internationally namely, in France, Italy and Portugal. A former skilled footballer in Italy, Enrico has successfully experienced all the steps in the Youth football coaching pyramid, from U-11 to U-19.
+                    </p>
+                </div>
+            </div>
+            <div class="teamMember">
+                <img alt = "team member profile picture" src = "../../src/images/surja-yadav.gif" class = "teamMemberImage">
+                <div class="teamMemberText">
+                    <h3>Surja Yadav</h3>
+                    <p>
+                        Hailing from the Mecca of Indian football; Kolkata, our home-bred football Guru, Surja is a AFC-C License holder. He has also held advisory roles for the Indian national team at various levels.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div id='footer' class = "hide">
+            <div class='socialMedia'>Social Media</div>
+            <a href="www.google.com">Terms</a>
+            <a href="www.google.com">Privacy</a>
+            <p>© 2019 Golazo Sports</p>
+        </div>
+    </div>
+    <script>
+        menuClick = () => {
+            console.log("wooo");
+            const pgBelowNav = document.getElementById('pageBelowNavbar');
+            const overlay = document.getElementById('overlay');
+            const menuIcon = document.getElementById('menuIcon');
+            const footer = document.getElementById('footer');
+            console.log(footer);
+            toggleClass(footer, "hide", "show");
+            console.log(footer);
+            toggleClass(overlay, "hide", "show");
+            toggleClass(pgBelowNav, "hide", "show");
+            toggleClass(menuIcon, "change", "");
+        }
+
+        toggleClass = (theId, class1, class2) => {
+            if (theId.className === class1) {
+                theId.className = class2;
+            } else {
+                theId.className = class1;
+            }
+        }
+    </script>
+</body>
+
+</html>
