@@ -157,13 +157,34 @@ h3 {
 
 #overlay {
   background-color: #000;
-  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 300px;
+  font-size: 1.4em;
+  /* display: none; */
+  /* display: flex; */
   /* visibility: hidden; */
 }
 
 #overlay a {
+  display: block;
   text-decoration: none;
   color: var(--Mustard);
+  margin-bottom: 20px;
+  padding: 3px;
+}
+
+#overlay a:hover, .navBar a:hover {
+  color: #ecf0f1;
+}
+
+.heavy {
+  font-weight: 800;
+}
+
+.light {
+  font-size: 0.6em;
 }
 
 /* Navbar action button */
@@ -178,15 +199,15 @@ h3 {
   transition: 0.3s;
 }
 
-/* Navbar menu button clicked */
+/* Changes when Navbar menu button gets clicked */
 
 .hide {
-  /* display:none; */
-  visibility: visible;
+  display:none;
+  /* visibility: visible; */
 }
 
 .show {
-  /* display: block; */
+  display: flex;
   /* visibility: visible; */
 }
 
@@ -202,7 +223,11 @@ h3 {
   transform: rotate(45deg) translate(0px, 3px);
 }
 
-.pageBelowNavbar {
+#pageBelowNavbar.show{
+  display:inherit;
+}
+
+#pageBelowNavbar {
     padding: 10% 20%;
 }
 

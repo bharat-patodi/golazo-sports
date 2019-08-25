@@ -17,7 +17,15 @@
                 <div class="menuIconBars bar3"></div>
             </div>
         </div>
-        <div class="pageBelowNavbar">
+        <div id="overlay" class="hide">
+            <div class="heavy"><a href="./client/pages/curriculum-design.html">Curriculum</a></div>
+            <div class="heavy"><a href="/client/pages/training-schedule.html">Schedule</a></div>
+            <div class="heavy"><a href="/client/pages/tournaments.html">Tournaments</a></div>
+            <div class="heavy"><a href="/client/pages/gallery.html">Gallery</a></div>
+            <div class="light"><a href="/client/pages/about-us.html">About Us</a></div>
+            <div class="light"><a href="/client/pages/contact-us.html">Contact Us</a></div>
+        </div>
+        <div id="pageBelowNavbar">
             <h2 class="punchline">Everyone loses games, few change them.</h2>
             <p>
                 Out on this tract with a long term vision of shaking up the dynamics of this beautiful Ball-game in India, we, here, at Golazo Sports, are committed to providing the young emerging talents with the best of platforms to DREAM BIG. Our love of football is truly at the heart of everything we do. Backed with the drive for EXCELLENCE and INTEGRITY, we believe in a 360 degree approach to football: identifying talent, investing in and developing young players and assisting them in every step of the way, to help them make the best possible decisions both on and off the pitch.
@@ -57,5 +65,27 @@
             <p>© 2019 Golazo Sports</p>
         </div>
     </div>
+    <script>
+        menuClick = () => {
+            console.log("wooo");
+            const pgBelowNav = document.getElementById('pageBelowNavbar');
+            console.log(pgBelowNav);
+            const overlay = document.getElementById('overlay');
+            console.log(overlay);
+            const menuIcon = document.getElementById('menuIcon');
+            console.log(menuIcon);
+            toggleClass(overlay, "hide", "show");
+            toggleClass(pgBelowNav, "hide", "show");
+            toggleClass(menuIcon, "change", "");
+        }
+
+        toggleClass = (theId, class1, class2) => {
+            if (theId.className === class1) {
+                theId.className = class2;
+            } else {
+                theId.className = class1;
+            }
+        }
+    </script>
 </body>
 </html>

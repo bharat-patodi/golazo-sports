@@ -163,6 +163,10 @@ h3 {
   padding: 3px;
 }
 
+#overlay a:hover, .navBar a:hover {
+  color: #ecf0f1;
+}
+
 .heavy {
   font-weight: 800;
 }
@@ -183,7 +187,7 @@ h3 {
   transition: 0.3s;
 }
 
-/* Navbar menu button clicked */
+/* Changes when Navbar menu button gets clicked */
 
 .hide {
   display:none;
@@ -207,6 +211,9 @@ h3 {
   transform: rotate(45deg) translate(0px, 3px);
 }
 
+#pageBelowNavbar.show{
+  display:inherit;
+}
 
 /* Combined CSS for all the pitch sections */
 
@@ -366,13 +373,6 @@ h3 {
 #footer a {
   text-decoration: none;
   color: var(--Mustard);
-}
-
-
-
-/* Test CSS */
-#pageBelowNavbar.show{
-  display:inherit;
 }
 
 /* ---------------------------------------------------------------

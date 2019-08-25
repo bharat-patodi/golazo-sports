@@ -104,16 +104,12 @@
     <script>
         // Added class by mistake, should be tag
         menuClick = () => {
-            console.log("Wooooooooooooooooooooo");
             const pgBelowNav = document.getElementById('pageBelowNavbar');
             const overlay = document.getElementById('overlay');
             const menuIcon = document.getElementById('menuIcon');
             toggleClass(overlay, "show", "hide");
             toggleClass(pgBelowNav, "hide", "show");
             toggleClass(menuIcon, "change", "");
-            console.log(document.getElementById('overlay'));
-            console.log(document.getElementById('pageBelowNavbar'));
-            console.log(document.getElementById('menuIcon'));
         }
 
         toggleClass = (theId, class1, class2) => {
