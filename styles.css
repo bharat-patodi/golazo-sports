@@ -236,10 +236,13 @@ h3 {
 
 /* The explanation for the punchline */
 .explanation {
+  font-size: 1.4em;
+  /* font-weight: 800; */
 }
 
 /* The Button */
 .callToAction {
+  text-decoration: none;
   padding: 10px;
   background: var(--Mustard);
   font-size: 1.2em;
