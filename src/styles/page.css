@@ -132,9 +132,10 @@ h3 {
 
 /* The punchline */
 .punchline {
-  font-size: 4em;
+  font-size: 3.5em;
   line-height: 1.2;
   font-style: italic;
+  word-wrap: wrap;
 }
 
 /* Specific sections */
@@ -228,7 +229,7 @@ h3 {
 }
 
 #pageBelowNavbar {
-    padding: 10% 10% 2% 10%;
+    padding: 10%;
 }
 
 #footer {
