@@ -378,9 +378,9 @@ h3 {
 Media Queries
 ---------------------------------------------------------------*/
 
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
   #methodology, #team {
     padding: 200px;
   }
@@ -396,6 +396,7 @@ Media Queries
   .videoText {
     margin: 200px;
   }
+
 }
 
 /* Medium devices (desktops, 992px and up) */

@@ -160,12 +160,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
+  padding-bottom: 150px;
   width: 100%;
-  /* padding-bottom: 300px; */
   font-size: 1.4em;
-  /* display: none; */
-  /* display: flex; */
-  /* visibility: hidden; */
 }
 
 #overlay a {
