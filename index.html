@@ -11,7 +11,7 @@
 <body>
     <div class = 'container'>
         <div class = 'navBar'>
-            <div id="home"><a href = "/index.html">G<span class = "whiteO">o</span>laz<span class = "whiteO">o</span></a></div>
+            <div id="home"><a href = "/index.html">Golazo</a></div>
             <div id = "menuIcon" onclick = "menuClick()">
                 <div class = "menuIconBars bar1"></div>
                 <div class = "menuIconBars bar2"></div>
@@ -32,7 +32,10 @@
             <div class="videoText productPitchSection" >
                 <h2 class = 'punchline'>golazo</h2>
                 <p class = "explanation">Soccer is love</p>
-                <button class = "callToAction">Get My Free Session</button>
+                <a class = "callToAction" onclick = "displayPopup()">Get My Free Session</a>
+            </div>
+            <div id="popup">
+                <p>this is the popup.</p>
             </div>
         </div>
 
@@ -87,7 +90,13 @@
                     </p>
                 </div>
             </div>
-            <button class = "callToAction">Get My Free Session</button>
+            <a class = "callToAction">Get My Free Session</a>
+
+            <!-- Get My Free Session Popup
+            <div id="popup">
+                <p>this is the popup.</p>
+            </div>
+-->
         </div>
 
         <div class = 'productPitchSection' id = 'news'>News Coverage</div>
@@ -118,6 +127,11 @@
             } else {
                 theId.className = class1;
             }
+        }
+
+        displayPopup = () => {
+            const popup = document.getElementById('popup');
+            popup.classList.toggle("show");
         }
     </script>
 </body>

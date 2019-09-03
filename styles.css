@@ -191,12 +191,14 @@ h3 {
 
 .hide {
   display:none;
-  /* visibility: visible; */
 }
 
 .show {
   display: flex;
-  /* visibility: visible; */
+}
+
+#popup.show {
+  display: block;
 }
 
 .change .bar1 {
@@ -278,6 +280,19 @@ h3 {
 
 .videoText {
   color: white;
+}
+
+#popup {
+  position: fixed;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 50;
+  border: 3px solid blue;
+  /* display: none; */
+  /* position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%); */
 }
 
 #methodology {
