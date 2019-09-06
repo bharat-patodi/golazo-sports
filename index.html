@@ -12,6 +12,7 @@
     <div class = 'container'>
         <div class = 'navBar'>
             <div id="home"><a href = "/index.html">Golazo</a></div>
+            <div id="contact">+91-9425410665</div>
             <div id = "menuIcon" onclick = "menuClick()">
                 <div class = "menuIconBars bar1"></div>
                 <div class = "menuIconBars bar2"></div>
@@ -32,7 +33,10 @@
             <div class="videoText productPitchSection" >
                 <h2 class = 'punchline'>golazo</h2>
                 <p class = "explanation">Soccer is love</p>
-                <a class = "callToAction" onclick = "displayPopup()">Get My Free Session</a>
+                <form>
+                <input type="tel" class = "userInfo" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" id = "userMobileNumber"/>
+                <button class = "callToAction" type = "submit" onclick = "displayPopup()">Get My Free Session</button>
+                </form>
             </div>
             <div id="popup">
                 <p>this is the popup.</p>
@@ -111,7 +115,6 @@
         </div>
     </div>
     <script>
-        // Added class by mistake, should be tag
         menuClick = () => {
             const pgBelowNav = document.getElementById('pageBelowNavbar');
             const overlay = document.getElementById('overlay');
@@ -132,6 +135,7 @@
         displayPopup = () => {
             const popup = document.getElementById('popup');
             popup.classList.toggle("show");
+            // popup.innerHTML = "Hi";
         }
     </script>
 </body>
@@ -144,5 +148,6 @@
     (d) Add a functional nav-overlay
     (e) Add a wp blog
     (f) Footer
-    (g)
+    (g) The contact form submission opens up the number pad on mobile.
+    (h)
  -->

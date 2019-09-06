@@ -141,7 +141,11 @@ h3 {
   .navBar a {
     text-decoration: none;
     color: var(--Mustard);
-}
+  }
+
+  .navBar #contact {
+    color: white;
+  }
 
 #overlay {
   background-color: #000;
@@ -199,6 +203,7 @@ h3 {
 
 #popup.show {
   display: block;
+  position: absolute;
 }
 
 .change .bar1 {
@@ -254,6 +259,14 @@ h3 {
   cursor: pointer;
   border: none;
   width: 200px;
+  margin-top: 10px;
+}
+
+.userInfo {
+  padding: 10px;
+  font-size: 1.2em;
+  color: #000;
+  width: 200px;
   margin-top: 50px;
 }
 
@@ -286,10 +299,10 @@ h3 {
   position: fixed;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 50;
   border: 3px solid blue;
-  /* display: none; */
+  display: none;
+  top: 100px;
+  left: 100px;
   /* position: absolute;
   left: 50%;
   transform: translate(-50%, 0%); */
