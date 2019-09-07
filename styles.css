@@ -128,14 +128,15 @@ h3 {
 
 /* Specific sections */
 .navBar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: black;
-    position: sticky;
-    top: 0;
-    padding: 10px 30px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Specifically to offset the intro div */
 }
 
   .navBar a {
@@ -392,7 +393,7 @@ h3 {
 
 #footer {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: var(--Black);
   color: var(--CloudWhite);
 }
@@ -417,9 +418,6 @@ Media Queries
     font-size: 4.5em;
   }
 
-  .videoText {
-  }
-
   .userInfo {
     width: 500px;
     justify-content: space-between;
@@ -429,8 +427,7 @@ Media Queries
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #introductoryVideo {
-  }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
