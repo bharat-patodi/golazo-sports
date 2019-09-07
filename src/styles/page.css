@@ -236,10 +236,11 @@ h3 {
 #footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: var(--Black);
   color: var(--CloudWhite);
-  padding: 10px 30px;
+  padding: 50px 10px 50px 10px;
 }
 
 #footer a {
