@@ -12,7 +12,7 @@
     <div class = 'container'>
         <div class = 'navBar'>
             <div id="home"><a href = "/index.html">Golazo</a></div>
-            <div id="contact">+91-9425410665</div>
+            <div id="contact">94254-10665</div>
             <div id = "menuIcon" onclick = "menuClick()">
                 <div class = "menuIconBars bar1"></div>
                 <div class = "menuIconBars bar2"></div>
@@ -33,9 +33,9 @@
             <div class="videoText productPitchSection" >
                 <h2 class = 'punchline'>golazo</h2>
                 <p class = "explanation">Soccer is love</p>
-                <form>
-                <input type="tel" class = "userInfo" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" id = "userMobileNumber"/>
-                <button class = "callToAction" type = "submit" onclick = "displayPopup()">Get My Free Session</button>
+                <form action="" class = "userInfo">
+                    <input type="tel" class = "inputMobileNumber" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" id = "userMobileNumber"/>
+                    <a class = "callToAction" type = "submit" onclick = "displayPopup()">Get My Free Session</a>
                 </form>
             </div>
             <div id="popup">
@@ -94,7 +94,12 @@
                     </p>
                 </div>
             </div>
-            <a class = "callToAction">Get My Free Session</a>
+
+                <form action="" class="userInfo">
+                    <input type="tel" class="inputMobileNumber" placeholder="Mobile Number" pattern="[6-9]{1}[0-9]{9}"
+                        id="userMobileNumber" />
+                    <a class="callToAction" type="submit" onclick="displayPopup()">Get My Free Session</a>
+                </form>
 
             <!-- Get My Free Session Popup
             <div id="popup">
