@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class = 'container'>
-        <div class = 'navBar'>
+
+        <nav class = 'navBar'>
             <div id="home"><a href = "/index.html">Golazo</a></div>
             <div id="contact">94254-10665</div>
             <div id = "menuIcon" onclick = "menuClick()">
@@ -18,30 +19,32 @@
                 <div class = "menuIconBars bar2"></div>
                 <div class = "menuIconBars bar3"></div>
             </div>
+        </nav>
+
+        <div id="overlay" class = "hide">
+            <div class = "heavy"><a href="./client/pages/curriculum-design.html">Curriculum</a></div>
+            <div class = "heavy"><a href="#">Blog</a></div>
+            <div class = "heavy"><a href="/client/pages/tournaments.html">Tournaments</a></div>
+            <div class = "heavy"><a href="/client/pages/gallery.html">News</a></div>
+            <div class = "light"><a href="/client/pages/about-us.html">About Us</a></div>
+            <div class = "light"><a href="/client/pages/contact-us.html">Contact Us</a></div>
         </div>
-            <div id="overlay" class = "hide">
-                <div class = "heavy"><a href="./client/pages/curriculum-design.html">Curriculum</a></div>
-                <div class = "heavy"><a href="#">Blog</a></div>
-                <div class = "heavy"><a href="/client/pages/tournaments.html">Tournaments</a></div>
-                <div class = "heavy"><a href="/client/pages/gallery.html">News</a></div>
-                <div class = "light"><a href="/client/pages/about-us.html">About Us</a></div>
-                <div class = "light"><a href="/client/pages/contact-us.html">Contact Us</a></div>
-            </div>
+
         <div id="pageBelowNavbar" class = "show">
-        <div id = 'introduction'>
-            <video id = "introductoryVideo" src = "src/videos/Sample-GamePlay.mp4" autoplay loop></video>
-            <div class="videoText productPitchSection" >
-                <h2 class = 'punchline'>golazo</h2>
-                <p class = "explanation">Soccer is love</p>
-                <form action="" class = "userInfo">
-                    <input type="tel" class = "inputMobileNumber" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" id = "userMobileNumber"/>
-                    <a class = "callToAction" type = "submit" onclick = "displayPopup()">Get My Free Session</a>
-                </form>
+            <div id = 'introduction'>
+                <video id = "introductoryVideo" src = "src/videos/Sample-GamePlay.mp4" autoplay loop></video>
+                <div class="videoText productPitchSection" >
+                    <h2 class = 'punchline'>golazo</h2>
+                    <p class = "explanation">Soccer is love</p>
+                    <form action="" class = "userInfo">
+                        <input type="tel" class = "inputMobileNumber" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" id = "userMobileNumber"/>
+                        <button class = "callToAction" type = "submit" onclick = "displayPopup()">Get My Free Session</button>
+                    </form>
+                </div>
+                <div id="popup">
+                    <p>this is the popup.</p>
+                </div>
             </div>
-            <div id="popup">
-                <p>this is the popup.</p>
-            </div>
-        </div>
 
         <div class = 'productPitchSection' id = 'methodology'>
             <h2 class = 'punchline'>best soccer camps</h2>
@@ -98,7 +101,7 @@
                 <form action="" class="userInfo">
                     <input type="tel" class="inputMobileNumber" placeholder="Mobile Number" pattern="[6-9]{1}[0-9]{9}"
                         id="userMobileNumber" />
-                    <a class="callToAction" type="submit" onclick="displayPopup()">Get My Free Session</a>
+                    <button class="callToAction" type="submit" onclick="displayPopup()">Get My Free Session</button>
                 </form>
         </div>
 
