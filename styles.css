@@ -177,8 +177,6 @@ h3 {
 }
 
 /* Navbar action button */
-#menuIcon {
-}
 
 .navBar .menuIconBars {
   width: 25px;
@@ -254,7 +252,7 @@ h3 {
 }
 
 .inputMobileNumber {
-  box-sizing: border-box;
+  box-sizing: border-box; /* This puts the padding in the size calculation box */
   color: #000;
   font-size: 1.1em;
   margin: 10px 0px 10px 0px;
@@ -293,7 +291,6 @@ h3 {
   left: 50%;
   transform: translate(-50%, 0%);
   object-fit: cover;
-  /* background: url(src/images/random-football.jpg) no-repeat; */
 }
 
 .videoText {
@@ -311,7 +308,7 @@ h3 {
 }
 
 #methodology {
-  background: url(../src/images/introduction-sample-image.jpg);
+  background: url(../images/introduction-sample-image.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -319,7 +316,7 @@ h3 {
 }
 
 #team {
-  background-image: url(../src/images/team-sample-image.png);
+  background-image: url(../images/team-sample-image.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -328,7 +325,7 @@ h3 {
 
 /* The Training Schedule and the Pricing Charts */
 #trainingSchedule {
-  background: url(../src/images/random-football.jpg);
+  background: url(../images/random-football.jpg);
   background-size: cover;
   padding-left: 0;
   padding-right: 0;

@@ -7,7 +7,7 @@ const minifyJS = require('gulp-minify');
 // CSS Fixing
 
 function cssFixing() {
-    return gulp.src('styles.css').pipe(minifyCSS()).pipe(autoprefixer()).pipe(gulp.dest('build'));
+    return gulp.src('styles.css').pipe(minifyCSS()).pipe(autoprefixer()).pipe(gulp.dest('src/styles'));
 };
 
 function automatedCSSFixing() {

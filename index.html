@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel = "stylesheet" href = "build/styles.css" />
+    <link rel = "stylesheet" href = "src/styles/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Roboto&display=swap" rel="stylesheet">
     <title>Golazo Sports</title>
 </head>
@@ -22,40 +22,47 @@
         </nav>
 
         <div id="overlay" class = "hide">
-            <div class = "heavy"><a href="./client/pages/curriculum-design.html">Curriculum</a></div>
+            <div class = "heavy"><a href="/pages/curriculum-design.html">Curriculum</a></div>
             <div class = "heavy"><a href="#">Blog</a></div>
-            <div class = "heavy"><a href="/client/pages/tournaments.html">Tournaments</a></div>
-            <div class = "heavy"><a href="/client/pages/gallery.html">News</a></div>
-            <div class = "light"><a href="/client/pages/about-us.html">About Us</a></div>
-            <div class = "light"><a href="/client/pages/contact-us.html">Contact Us</a></div>
+            <div class = "heavy"><a href="/pages/tournaments.html">Tournaments</a></div>
+            <div class = "heavy"><a href="/pages/gallery.html">News</a></div>
+            <div class = "light"><a href="/pages/about-us.html">About Us</a></div>
+            <div class = "light"><a href="/pages/contact-us.html">Contact Us</a></div>
         </div>
 
         <div id="pageBelowNavbar" class = "show">
             <div id = 'introduction'>
-                <video id = "introductoryVideo" src = "src/videos/Sample-GamePlay.mp4" autoplay loop></video>
+                <video id = "introductoryVideo" autoplay loop muted playsinline poster="video-background-image.jpg">
+                    <source src = "src/videos/Sample-Gameplay.mp4" type = "video/mp4" />
+                    <source src = "src/videos/Sample-Gameplay.webm" type = "video/webm" />
+                    <source src = "src/videos/Sample-Gameplay.ogv" type = "video/ogv" />
+                </video>
+                <!-- <img src = "src/videos/Sample-Gameplay.gif" id = "videoBackup"/> -->
                 <div class="videoText productPitchSection" >
                     <h2 class = 'punchline'>golazo</h2>
                     <p class = "explanation">Soccer is love</p>
                     <form name="submit-to-google-sheet" action="" class = "userInfo">
-                        <input type="tel" class = "inputMobileNumber" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" id = "userMobileNumber" name = "mobile" required/>
+                        <input type="tel" class = "inputMobileNumber" placeholder="Mobile Number" pattern = "[6-9]{1}[0-9]{9}" name = "mobile" required/>
                         <button class = "callToAction" type = "submit" onclick = "displayPopup()">Get My Free Session</button>
                     </form>
                 </div>
+                <!--
                 <div id="popup">
                     <p>this is the popup.</p>
                 </div>
+                -->
             </div>
 
         <div class = 'productPitchSection' id = 'methodology'>
             <h2 class = 'punchline'>best soccer camps</h2>
-            <p class = "explanation">We have the best soccer camps.</p>
-            <a class = "callToAction" href = "client/pages/curriculum-design.html">Why are we the best</a>
+            <p class = "explanation">We have the best soccer camps</p>
+            <a class = "callToAction" href = "pages/curriculum-design.html">Why are we the best</a>
         </div>
 
         <div class = 'productPitchSection' id = 'team'>
             <h2 class = "punchline">super team</h2>
-            <p class = "explanation">Our coaching staff is excellent.</p>
-            <a class = "callToAction" href = "client/pages/about-us.html">Know More</a>
+            <p class = "explanation">Our coaching staff is excellent</p>
+            <a class = "callToAction" href = "pages/about-us.html">Know More</a>
         </div>
 
         <div class = 'productPitchSection' id = 'trainingSchedule'>
@@ -99,8 +106,7 @@
             </div>
 
                 <form name="submit-to-google-sheet" action="" class="userInfo">
-                    <input type="tel" class="inputMobileNumber" placeholder="Mobile Number" pattern="[6-9]{1}[0-9]{9}"
-                        id="userMobileNumber" name = "mobile" required/>
+                    <input type="tel" class="inputMobileNumber" placeholder="Mobile Number" pattern="[6-9]{1}[0-9]{9}" name = "mobile" required/>
                     <button class="callToAction" type="submit" onclick="displayPopup()">Get My Free Session</button>
                 </form>
         </div>
@@ -139,25 +145,30 @@
         }
 
         // Script for inputting form data to google sheets
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzpM1YWhYX7tctcU1vW-XulWl94sPtNwKCa65abD6eEOkZOXrA/exec'
-            const form = document.forms['submit-to-google-sheet']
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzpM1YWhYX7tctcU1vW-XulWl94sPtNwKCa65abD6eEOkZOXrA/exec';
+        const form = document.forms['submit-to-google-sheet'];
 
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => console.log('Success!', response))
-                    .catch(error => console.error('Error!', error.message))
-            })
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message));
+            });
     </script>
 </body>
 </html>
 
 <!--
-    (a) Add different video types
+    (a) Backup image for the video
+    (b) Separate the js in a new file
     (c) Get proper images
-    (d) Add a functional nav-overlay
+    (d) Improve the overlay to consume the whole height
     (e) Add a wp blog
     (f) Footer
     (g) The contact form submission opens up the number pad on mobile.
-    (h) google form link: https://script.google.com/macros/s/AKfycbzpM1YWhYX7tctcU1vW-XulWl94sPtNwKCa65abD6eEOkZOXrA/exec
+    (h) FTP isn't working
+    (i) SSL certificate to be acquired.
+    (j) Add a loader to show that the video is loading
+    (h) Favicon
+    (i) Popup to confirm form submission
  -->
