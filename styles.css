@@ -299,12 +299,13 @@ h3 {
 
 #popup {
   position: fixed;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 3px solid blue;
+  padding: 2%;
+  background-color: var(--CloudWhite);
   display: none;
-  top: 100px;
-  left: 100px;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50vw, -50vh);
+  text-align: center;
 }
 
 #methodology {
