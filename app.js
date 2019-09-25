@@ -25,6 +25,12 @@ displayPopupBottom = () => {
     popupBottom.classList.toggle("show");
 }
 
+popupClose = (popupType) => {
+    const test = '' + popupType + '';
+    console.log(test);
+    document.getElementById('popup' + popupType).classList.toggle('show');
+}
+
 myEventListener = (form, func) => {
     form.addEventListener('submit', e => {
         e.preventDefault();
