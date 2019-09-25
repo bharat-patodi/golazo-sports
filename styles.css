@@ -198,12 +198,10 @@ h3 {
 
 #popupTop.show {
   display: block;
-  position: absolute;
 }
 
 #popupBottom.show {
   display: block;
-  position: absolute;
 }
 
 .change .bar1 {
@@ -312,17 +310,19 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 1;
 }
 
 #popupBottom {
-  position: absolute;
+  position: fixed;
   padding: 2%;
   background-color: var(--CloudWhite);
   display: none;
-  bottom: 5%;
+  bottom: 50%;
   right: 50%;
-  transform: translate(50%, 5%);
+  transform: translate(50%, 50%);
   text-align: center;
+  z-index: 1;
 }
 
 #popupTopClose, #popupBottomClose {
