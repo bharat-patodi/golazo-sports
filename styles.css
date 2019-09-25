@@ -196,7 +196,12 @@ h3 {
   display: flex;
 }
 
-#popup.show {
+#popupTop.show {
+  display: block;
+  position: absolute;
+}
+
+#popupBottom.show {
   display: block;
   position: absolute;
 }
@@ -227,6 +232,7 @@ h3 {
   flex-wrap: wrap;
   text-align: center;
   padding: 50px 10px 50px 10px;
+  position: relative;
 }
 
 /* The punchline */
@@ -297,14 +303,25 @@ h3 {
   color: white;
 }
 
-#popup {
+#popupTop {
   position: fixed;
   padding: 2%;
   background-color: var(--CloudWhite);
   display: none;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50vw, -50vh);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#popupBottom {
+  position: absolute;
+  padding: 2%;
+  background-color: var(--CloudWhite);
+  display: none;
+  bottom: 1%;
+  right: 50%;
+  transform: translate(50%, 1%);
   text-align: center;
 }
 

@@ -15,18 +15,27 @@ toggleClass = (theId, class1, class2) => {
     }
 }
 
-displayPopup = () => {
-    // const popup = document.getElementById('popup');
-    // popup.classList.toggle("show");
-    // popup.innerHTML = "Hi";
+displayPopupTop = () => {
+    const popupTop = document.getElementById('popupTop');
+    popupTop.classList.toggle("show");
 }
 
-myEventListener = (form) => {
+displayPopupBottom = () => {
+    const popupBottom = document.getElementById('popupBottom');
+    popupBottom.classList.toggle("show");
+}
+
+myEventListener = (form, func) => {
     form.addEventListener('submit', e => {
         e.preventDefault();
         const formData = new FormData(form);
         fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => console.log('Success!', response))
+            .then(response => {
+                console.log('Success!', response);
+                if(response.status === 200) {
+                    func();
+                }
+            })
             .catch(error => console.error('Error!', error.message));
         for (var key of formData.entries()) {
             console.log(key);
@@ -36,8 +45,6 @@ myEventListener = (form) => {
 // Script for inputting form data to google sheets
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzpM1YWhYX7tctcU1vW-XulWl94sPtNwKCa65abD6eEOkZOXrA/exec';
 const form01 = document.forms['submit-to-google-sheet-01'];
-myEventListener(form01);
+myEventListener(form01, displayPopupTop);
 const form02 = document.forms['submit-to-google-sheet-02'];
-myEventListener(form02);
-console.log(form01);
-console.log(form02);
+myEventListener(form02, displayPopupBottom);
