@@ -375,19 +375,19 @@ h3 {
 }
 
 #trainingSchedule .under8s {
-  background-color: rgba(237, 77, 19, 0.75);
+  background-color: var(--Olive);
+  opacity: 0.8
 }
 
 #trainingSchedule .under13s {
-  background-color: rgba(0, 92, 90, 0.75);
+  background-color: #375e97;
+  background-color: var(--BelizeHole);
+  opacity: 0.8
 }
 
 #trainingSchedule .under16s {
-  background-color: rgba(243, 113, 0, 0.75);
-}
-
-#news {
-  background-color: var(--Maroon);
+  background-color: var(--Pomegranate);
+  opacity: 0.8;
 }
 
 #footer {
