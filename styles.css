@@ -305,7 +305,7 @@ h3 {
   position: fixed;
   padding: 2%;
   background-color: var(--CloudWhite);
-  display: none;
+  /* display: none; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -318,7 +318,7 @@ h3 {
   position: fixed;
   padding: 2%;
   background-color: var(--CloudWhite);
-  display: none;
+  /* display: none; */
   bottom: 50%;
   right: 50%;
   transform: translate(50%, 50%);
@@ -330,6 +330,7 @@ h3 {
 #popupTopClose, #popupBottomClose {
   /* display: inline-block; */
   align-self: flex-end;
+  cursor: pointer;
   /* right: 5px; */
   /* top: 5px; */
 }

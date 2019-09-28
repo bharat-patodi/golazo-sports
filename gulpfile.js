@@ -15,9 +15,19 @@ function automatedCSSFixing() {
 }
 // JS Fixing
 
+function jsFixing () {
+    return gulp.src('app.js').pipe(eslint()).pipe(minifyJS()).pipe(gulp.dest('src/js'));
+}
 
-// Default task
+function automatedJSFixing () {
+    return gulp.watch('app.js', jsFixing);
+}
 
 // Exports
 exports.cssFixing = cssFixing;
 exports.automatedCSSFixing = automatedCSSFixing;
+exports.jsFixing = jsFixing;
+exports.automatedJSFixing = automatedJSFixing;
+
+// Default task
+exports.default = gulp.parallel(automatedCSSFixing, automatedJSFixing);
