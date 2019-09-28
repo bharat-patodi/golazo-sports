@@ -197,11 +197,11 @@ h3 {
 }
 
 #popupTop.show {
-  display: block;
+  display: flex;
 }
 
 #popupBottom.show {
-  display: block;
+  display: flex;
 }
 
 .change .bar1 {
@@ -311,6 +311,7 @@ h3 {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
+  flex-direction: column;
 }
 
 #popupBottom {
@@ -323,12 +324,14 @@ h3 {
   transform: translate(50%, 50%);
   text-align: center;
   z-index: 1;
+  flex-direction: column;
 }
 
 #popupTopClose, #popupBottomClose {
-  display: absolute;
-  right: 5px;
-  top: 5px;
+  /* display: inline-block; */
+  align-self: flex-end;
+  /* right: 5px; */
+  /* top: 5px; */
 }
 
 .popupCloseBars {
