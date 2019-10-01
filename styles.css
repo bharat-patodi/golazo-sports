@@ -305,7 +305,6 @@ h3 {
   position: fixed;
   padding: 2%;
   background-color: var(--CloudWhite);
-  /* display: none; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -328,11 +327,8 @@ h3 {
 }
 
 #popupTopClose, #popupBottomClose {
-  /* display: inline-block; */
   align-self: flex-end;
   cursor: pointer;
-  /* right: 5px; */
-  /* top: 5px; */
 }
 
 .popupCloseBars {
@@ -348,6 +344,10 @@ h3 {
 
 .closeBar2 {
   transform: rotate(45deg) translate(0px, 0px);
+}
+
+.thumbsUp {
+  font-size: 2em;
 }
 
 #methodology {
