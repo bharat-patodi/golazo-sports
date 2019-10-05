@@ -148,6 +148,11 @@ h3 {
     color: white;
   }
 
+#logo {
+  width: 65px;
+  height: auto;
+}
+
 #overlay {
   background-color: #000;
   flex-direction: column;
@@ -468,6 +473,9 @@ Media Queries
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #logo {
+    width: 100px;
+  }
 
 }
 
