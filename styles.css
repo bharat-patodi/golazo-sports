@@ -145,7 +145,7 @@ h3 {
   }
 
   .navBar #contact {
-    color: white;
+    color: var(--CloudWhite);
   }
 
 #logo {
@@ -170,7 +170,7 @@ h3 {
 }
 
 #overlay a:hover, .navBar a:hover {
-  color: #ecf0f1;
+  color: var(--CloudWhite);
 }
 
 .heavy {
@@ -240,15 +240,23 @@ h3 {
 
 /* The punchline */
 .punchline {
-  font-size: 4.5em;
+  font-size: 4em;
   line-height: 1.2;
   font-style: italic;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-#punchline-second-line {
+#punchline-first-line {
   color: var(--Mustard);
+}
+
+#punchline-second-line {
+  color: var(--CloudWhite);
+}
+
+.videoText .punchline {
+  padding-bottom: 10px;
 }
 
 /* The explanation for the punchline */
@@ -260,7 +268,7 @@ h3 {
 .userInfo {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 10px;
   justify-content: center;
 }
 
@@ -307,7 +315,7 @@ h3 {
 }
 
 .videoText {
-  color: white;
+  color: var(--CloudWhite);
 }
 
 #popupTop {
@@ -372,7 +380,7 @@ h3 {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--CloudWhite);
 }
 
 /* The Training Schedule and the Pricing Charts */
@@ -473,6 +481,10 @@ Media Queries
     justify-content: space-between;
   }
 
+  .punchline {
+    font-size: 4.5em;
+  }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -481,6 +493,9 @@ Media Queries
     width: 100px;
   }
 
+  .videoText .punchline {
+    padding-bottom: 100px;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
