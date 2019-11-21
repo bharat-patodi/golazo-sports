@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../src/styles/page.css">
+    <title>Curriculum Design Methodology</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class='navBar'>
+            <div id="home"><a href="/"><img id="logo" src="/src/images/golazo-sports-logo-white.png" /></a></div>
+            <div id="contact">999-3456-849</div>
+            <div id="menuIcon" onclick="menuClick()">
+                <div class="menuIconBars bar1"></div>
+                <div class="menuIconBars bar2"></div>
+                <div class="menuIconBars bar3"></div>
+            </div>
+        </nav>
+
+        <div id="overlay" class="hide">
+            <div class="heavy"><a href="/curriculum">Curriculum</a></div>
+            <div class="heavy"><a href="/blog">Blog</a></div>
+            <div class="heavy"><a href="/tournaments">Tournaments</a></div>
+            <div class="heavy"><a href="/news">News</a></div>
+            <div class="light"><a href="/about-us">About Us</a></div>
+            <div class="light"><a href="/contact-us">Contact Us</a></div>
+        </div>
+
+        <div id="pageBelowNavbar">
+            <h2>Phone Number</h2>
+            <p>+91 999-3456-849</p>
+            <h2>Location</h2>
+            <p><span class="heavy">Office:</span> 342, address</p>
+            <p><span class="heavy">Training Center 1:</span> 342, address</p>
+            <p><span class="heavy">Training Center 2:</span> 342, address</p>
+            <p><span class="heavy">Training Center 3:</span> 342, address</p>
+            <p><span class="heavy">Training Center 4:</span> 342, address</p>
+
+        </div>
+        <!-- Footer -->
+        <div id='footer'>
+            <div class='socialMedia'>Social Media</div>
+            <a href="www.google.com">Terms</a>
+            <a href="www.google.com">Privacy</a>
+            <p>© 2019 Golazo Sports</p>
+        </div>
+    </div>
+    <script>
+        menuClick = () => {
+            console.log("wooo");
+            const pgBelowNav = document.getElementById('pageBelowNavbar');
+            console.log(pgBelowNav);
+            const overlay = document.getElementById('overlay');
+            console.log(overlay);
+            const menuIcon = document.getElementById('menuIcon');
+            console.log(menuIcon);
+            toggleClass(overlay, "hide", "show");
+            toggleClass(pgBelowNav, "hide", "show");
+            toggleClass(menuIcon, "change", "");
+        }
+
+        toggleClass = (theId, class1, class2) => {
+            if (theId.className === class1) {
+                theId.className = class2;
+            } else {
+                theId.className = class1;
+            }
+        }
+    </script>
+</body>
+
+</html>
