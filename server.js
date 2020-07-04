@@ -29,5 +29,5 @@ app.use(function(err, req, res, next) {
 // Serve app
 // const port = 8000;
 app.listen(process.env.PORT || 3000, function() {
-    console.log('running at localhost: ' + port);
+    console.log('running at localhost: ');
 });
