@@ -7,7 +7,7 @@ const minifyJS = require('gulp-minify');
 // CSS Fixing
 
 function cssFixing() {
-    return gulp.src('styles.css').pipe(minifyCSS()).pipe(autoprefixer()).pipe(gulp.dest('src/styles'));
+    return gulp.src('styles.css').pipe(minifyCSS()).pipe(autoprefixer()).pipe(gulp.dest('public/styles'));
 };
 
 function automatedCSSFixing() {
@@ -16,7 +16,7 @@ function automatedCSSFixing() {
 // JS Fixing
 
 function jsFixing () {
-    return gulp.src('app.js').pipe(eslint()).pipe(minifyJS()).pipe(gulp.dest('src/js'));
+    return gulp.src('app.js').pipe(eslint()).pipe(minifyJS()).pipe(gulp.dest('public/js'));
 }
 
 function automatedJSFixing () {
