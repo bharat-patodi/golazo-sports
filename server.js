@@ -1,34 +1,17 @@
-// Import packages
-const path = require('path');
-const fs = require('fs');
-const express = require('express');
+const path = require("path");
+const express = require("express");
 
-// Create app
 const app = express();
 
-// View engine
-app.set('view engine', 'html');
-app.engine('html', function(path, options, callbacks) {
-    fs.readFile(path, 'utf-8', callback);
-});
-
-// Middleware
-// app.use(express.static(__dirname));
+// Serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
-// Routes
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+// Home route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// Error Handler
-
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-});
-
-// Serve app
-// const port = 8000;
-app.listen(process.env.PORT || 3000, function() {
-    console.log('running at localhost: ');
+// Start server
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server running");
 });
